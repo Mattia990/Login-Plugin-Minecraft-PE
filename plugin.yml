@@ -1,0 +1,35 @@
+name: Login
+main: mancio\Main
+version: 1.0
+author: mancio
+api: 2.0.0
+
+commands:
+    login:
+      usage: /login <password>
+      description: Questo comando ti permette di effettuare il login nel server
+      permission: permesso.prova
+
+    cambiapass:
+      description: Questo comando ti permette di cambiare la password in caso di necessita'
+      usage: /cambiapass <nuova password>
+      permission: permesso.prova
+      
+    mostrapass:
+      description: Questo comando ti permette di mostrare la password attuale
+      usage: /mostrapass
+      permission: permesso.prova
+      
+    resetpass:
+      description: Questo comando ti permette di resettare la password
+      usage: /resetpass
+      permission: permsesso.prova
+      
+    config:
+      description: Questo comando ti permette di configuare il server al primo avvio(anche dopo)
+      usage: /config <password> <x> <y> <z>
+      permission: permesso.prova
+      
+permissions:
+   permesso.prova:
+      default: true
