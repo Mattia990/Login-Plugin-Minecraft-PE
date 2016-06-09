@@ -50,10 +50,20 @@ class Main extends PluginBase implements Listener {
 	
 	public function onPlayerMove(PlayerMoveEvent $event) {
 		$player=$event->getPlayer();
+		$parsed = array(3);
+		$str = array();
 		
 		if(strcasecmp($player->getName(), Main::$name) == 0) {
 			if(!Main::$login) {
-				$loc=new Location($this->getConfig()->get("Spawn Location"));
+				$str[0]=(String) $this->getConfig()->get("X");
+				$str[1]=(String) $this->getConfig()->get("Y");
+				$str[2]=(String) $this->getConfig()->get("Z");
+				
+				for($i=0;$i<3;$i++) {
+					$parsed[$i]=intval($str[$i]);
+				}
+				
+				$loc=new Location($parsed[0], $parsed[1], $parsed[2]);
 				$player->teleport($loc);
 			}
 		}
