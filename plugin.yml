@@ -2,7 +2,7 @@ name: Login
 main: mancio\Main
 version: 1.0
 author: mancio
-api: 2.0.0
+api: [2.0.0]
 
 commands:
     login:

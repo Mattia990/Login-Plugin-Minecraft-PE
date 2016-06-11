@@ -1,6 +1,5 @@
 Password:
 First Start: true
-X:
-Y:
-Z:
-Spawn Location: 0, 0, 0
+#Use it for teleport player when moving in a safe spawn
+SafeSpawn: true
+
